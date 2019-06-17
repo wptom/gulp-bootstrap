@@ -1,0 +1,21 @@
+[
+    {
+        "common_json": "./app/json/shared/shared.json",
+        "templates_folder": "./app/templates",
+        "dest_folder": "./output",
+        "pages": [{
+                "page": "./app/pages/index.nunjucks",
+                "data": "./app/json/01.json",
+                "output_name": "index.html"
+            },{
+                "page": "./app/pages/01.nunjucks",
+                "data": "./app/json/01.json",
+                "output_name": "01.html"
+            },{
+                "page": "./app/pages/02.nunjucks",
+                "data": "./app/json/02.json",
+                "output_name": "02.html"
+            }
+        ]
+    }
+]

@@ -1,0 +1,9 @@
+.DS_Store
+.vscode/
+node_modules
+/output*
+
+*.log
+npm-debug.log*
+docker-compose.yml
+/Docker/*

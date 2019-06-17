@@ -1,0 +1,8 @@
+<!-- 01.nunjucks -->
+{% extends "layout.nunjucks" %}
+{% block content %}
+{{ COMMON.sharedData }}
+{{ PAGE.name }}
+{% include "../templates/partials/partial1.nunjucks" %}
+
+{% endblock %}

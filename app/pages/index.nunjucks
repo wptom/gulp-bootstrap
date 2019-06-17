@@ -1,0 +1,9 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+{% block content %}
+<img src="images/test.png" alt="logo" /><br>
+<a href="01.html">01.html</a><br>
+<a href="02.html">02.html</a><br>
+{% include "../templates/partials/partial1.nunjucks" %}
+
+{% endblock %}

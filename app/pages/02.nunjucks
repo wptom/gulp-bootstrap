@@ -1,0 +1,14 @@
+<!-- 02.nunjucks -->
+{% extends "layout.nunjucks" %}
+{% block content %}
+{{ PAGE.name }}
+{{ COMMON.sharedData }}
+
+{% for item in PAGE.array %}
+<p>{{ item.item1 }}</p>
+<p>{{ item.item2 }}</p>
+{% endfor %}
+
+{% include "../templates/partials/partial1.nunjucks" %}
+
+{% endblock %}

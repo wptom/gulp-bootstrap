@@ -1,0 +1,14 @@
+{
+    "title": "02.json",
+    "name": "twoww2",
+    "array": [
+        {
+            "item1": "2itemJedna234567",
+            "item2": "2itemDva"
+        },
+        {
+            "item1": "3itemJedna",
+            "item2": "3itemDva"
+        }
+    ]
+}
