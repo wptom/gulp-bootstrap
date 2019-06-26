@@ -1,5 +1,5 @@
-# gulp-simple
-Gulp, Nunjucks, JSON
+# gulp-bootstrap-less
+Gulp stack with Twitter Bootstrap LESS port.
 
 ## Installation
 
