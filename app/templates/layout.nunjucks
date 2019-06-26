@@ -9,8 +9,11 @@
 </head>
 <body>
 <div id="wrapper">
-{% include "partials/partial1.nunjucks" %}
+<div class="container">
+    <div class="row">
 {% block content %} {% endblock %}
+    </div>
+</div>
 </div>
 <script src="js/app.js"></script>
 </body>

@@ -4,6 +4,7 @@
   "main": "app.js",
   "license": "MIT",
   "dependencies": {
+    "bootstrap-less-port": "^1.0.0",
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "fs": "^0.0.1-security",
