@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const less = require('gulp-less');
+const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
@@ -9,20 +9,22 @@ const data = require('gulp-data');
 const fs = require('fs');
 const del = require('del');
 
+sass.compiler = require('node-sass');
+
 gulp.task('clean-html', function () {
     return del([
         'output/*.html'
     ]);
 });
 
-gulp.task('less', done => {
+gulp.task('sass', done => {
     gulp.src([
-            'app/less/*.less',
+            'app/sass/*.scss',
             // 'node_modules/normalize.css/normalize.css', 
             // 'node_modules/bootstrap-less-port/dist/css/bootstrap-grid.css'
         ])
         .pipe(sourcemaps.init())
-        .pipe(less())
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('output/css'))
@@ -115,14 +117,14 @@ gulp.task('watch', function () {
     gulp.watch('app/templates/**/*.nunjucks', gulp.series(['clean-html', 'readJSON']));
     gulp.watch('vendor', gulp.series('vendor'));
     gulp.watch('app/**/*.{gif,jpg,png,svg}', gulp.series('images'));
-    gulp.watch('app/less/**/*.less', gulp.series('less'));
+    gulp.watch('app/sass/**/*.scss', gulp.series('sass'));
     gulp.watch('app/js/**/*.js', gulp.series('js'));
     gulp.watch('./output').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.parallel(
     'vendor',
-    'less',
+    'sass',
     'js',
     'images',
     'clean-html',

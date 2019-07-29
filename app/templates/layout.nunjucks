@@ -2,16 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ PAGE.title }}</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div id="wrapper">
 <div class="container">
     <div class="row">
+     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+<header class="masthead mb-auto">
+  <div class="inner">
+    <h3 class="masthead-brand">gulp-bootstrap</h3>
+    {% include 'partials/menu.nunjucks' %}
+  </div>
+</header>
 {% block content %} {% endblock %}
+
+<footer class="mastfoot mt-auto">
+  <div class="inner">
+    <p>gulp-bootstrap template for <a href="#">Bootstrap</a>, by <a href="#">me</a>.</p>
+  </div>
+</footer>
+</div>
+
     </div>
 </div>
 </div>

@@ -1,14 +1,11 @@
 <!-- 02.nunjucks -->
 {% extends "layout.nunjucks" %}
 {% block content %}
-{{ PAGE.name }}
-{{ COMMON.sharedData }}
-
-{% for item in PAGE.array %}
-<p>{{ item.item1 }}</p>
-<p>{{ item.item2 }}</p>
-{% endfor %}
-
-{% include "../templates/partials/partial1.nunjucks" %}
-
+<main role="main" class="inner cover">
+  <h1 class="cover-heading">{{ PAGE.name }}</h1>
+  <p class="lead">{{ COMMON.description }}</p>
+  <p class="lead">
+    <a href="https://github.com/wptom/gulp-bootstrap" class="btn btn-lg btn-secondary">Learn more</a>
+  </p>
+</main>
 {% endblock %}

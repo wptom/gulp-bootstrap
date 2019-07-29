@@ -1,0 +1,5 @@
+<a href="index.html">index.html</a>
+<nav class="nav nav-masthead justify-content-center">
+    <a class="nav-link {%if PAGE.name=='01.json' %}active{% endif %}" href="01.html">01.html</a>
+    <a class="nav-link {%if PAGE.name=='02.json' %}active{% endif %}" href="02.html">02.html</a>
+</nav>

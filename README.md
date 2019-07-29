@@ -1,5 +1,5 @@
-# gulp-bootstrap-less
-Gulp stack with Twitter Bootstrap LESS port.
+# gulp-bootstrap
+Gulp stack with Twitter Bootstrap + Nunjucks templating system.
 
 ## Installation
 

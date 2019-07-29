@@ -1,22 +1,12 @@
 <!-- index.nunjucks -->
 {% extends "layout.nunjucks" %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <a href="01.html">01.html</a><br>
-        <a href="02.html">02.html</a><br>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-light">Light</button>
-        <button type="button" class="btn btn-dark">Dark</button>
-
-        <button type="button" class="btn btn-link">Link</button>
-        {% include "../templates/partials/partial1.nunjucks" %}
-    </div>
-</div>
-
+<main role="main" class="inner cover">
+  <h1 class="cover-heading">Homepage</h1>
+  <p class="lead">{{ COMMON.sharedData }}</p>
+  <p class="lead">gulp-bootstrap - devstack, starter template. JSON, Nunjucks, Bootstrap, Browserify.</p>
+  <p class="lead">
+    <a href="https://github.com/wptom/gulp-bootstrap" class="btn btn-lg btn-secondary">Learn more</a>
+  </p>
+</main>
 {% endblock %}

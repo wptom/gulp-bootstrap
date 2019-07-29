@@ -1,0 +1,10 @@
+@import "modules/bootstrap-overrides.scss";
+
+body {
+    background-color: $body-bg;
+    color: $body-color;
+}
+
+.active {
+    color: red;
+}
